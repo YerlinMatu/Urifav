@@ -1,0 +1,36 @@
+// === COLOR === 
+$bluePlus: #3897f0;
+// === FONTS ===
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+nav {
+  background-color: $bluePlus; 
+  .josefin { 
+    font-family: 'Josefin Sans', sans-serif;
+  }
+}
+
+i { vertical-align: top }
+td i {
+  cursor: pointer;
+  transition: .5s;
+  &:hover
+  { color: $bluePlus }
+}
+.bluePlus {
+  background-color: $bluePlus;
+  border-color: 1px #3897f0;
+  &:hover { background-color: #3897f0 + blue }
+  &:focus { background-color: #3897f0 + blue }
+}
+.formdata {
+  width: 90%;
+  padding: 40px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px;
+}
+
+.table {
+  width: 90%;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Uriapp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <main>
+  <div class="navbar-fixed">
+    <nav>
+      <a href="#" class="brand-logo josefin center">Urifav</a>
+      <ul class="left">
+        <li><a href="#">Add Link</a></li>
+        <li><a href="#">View Links</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container z-depth-1 formdata animated fadeInLeft">
+    <div class="row" @keyup.enter="savePage">
+      <div class="col s12">
+        <label>Título</label>
+        <input type="text" placeholder="Nombre del sitio" v-model="form.title">
+        <label>Autor</label>
+        <input type="text" placeholder="Autor del artículo" v-model="form.author">
+        <label>Link</label>
+        <input type="url" placeholder="http://example.com" v-model="form.link">
+        <button class="btn bluePlus" @click="savePage"><i class="material-icons">save</i> Guardar</button>
+      </div>
+    </div>
+    </div>
+  <div class="container table z-depth-1 animated fadeInUp">
+    <table class="centered striped" v-show="infoList">
+      <thead>
+        <tr>
+          <th><i class="material-icons">title</i> Título</th>
+          <th><i class="material-icons">person</i> Autor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(info, index) in infoList" class="animated fadeInLeft">
+          <td><a :href="info.link" target="_blank">{{ info.title }}</a></td>
+          <td>{{ info.author }}</td>
+          <td><i @click="deletePage(index)" class="material-icons">delete</i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

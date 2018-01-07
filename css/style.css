@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+nav {
+  background-color: #3897f0;
+}
+nav .josefin {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+i {
+  vertical-align: top;
+}
+
+td i {
+  cursor: pointer;
+  transition: .5s;
+}
+td i:hover {
+  color: #3897f0;
+}
+
+.bluePlus {
+  background-color: #3897f0;
+  border-color: 1px #3897f0;
+}
+.bluePlus:hover {
+  background-color: #3897ff;
+}
+.bluePlus:focus {
+  background-color: #3897ff;
+}
+
+.formdata {
+  width: 90%;
+  padding: 40px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px;
+}
+
+.table {
+  width: 90%;
+}
